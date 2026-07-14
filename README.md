@@ -9,7 +9,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 
 ## 🧱 Projects Overview
 
-### 🏫 [Campus Network Design & Implementation](./campus-network-project)]
+### 🏫 [Campus Network Design & Implementation](./campus-network-project)
 **Level:** Intermediate  
 **Focus:** Hierarchical Network Design, Multi-site Campus Topology, VLANs, Router-on-a-stick, DHCP, and RIP Routing
 **Highlights:**
@@ -20,7 +20,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 - Implemented RIP version 2 to manage internal routing between the Main Campus and Branch Campus.
 - Integrated a cloud-based email server with static routing and validated end-to-end connectivity
 
-### 🏢 [[Company Network Design & Implementation](./campus-network-project)]
+### 🏢 [Company Network Design & Implementation](./campus-network-project)
 **Level:** Advanced  
 **Focus:** Hierarchical Network Design, Enterprise Redundancy, VLAN Segmentation, OSPF Routing, Security Implementation. 
 **Highlights:**
