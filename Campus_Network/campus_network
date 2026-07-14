@@ -1,0 +1,114 @@
+# Campus Networking Project
+
+
+![alt text]({9A2D455F-5A35-4634-8ADD-EA3AEC64B14B}.png)
+
+
+A complete enterprise-grade network infrastructure design and prototype for a multi-campus university using **Cisco Packet Tracer**. The project implements a secure, scalable, and hierarchical network model providing end-to-end connectivity across multiple departments and geographical locations.
+
+## 📌 Project Overview
+
+University requires a robust network infrastructure to support two campuses situated 20 miles apart: the **Main Campus** and the **Branch Campus**. The network is designed using a three-layer hierarchical architecture (Core, Distribution, and Access) to separate distinct faculties, manage traffic efficiently, and secure campus assets.
+
+### Key Capabilities
+*   **Segmented Architecture:** 10 distinct departments isolated into dedicated Virtual Local Area Networks (VLANs).
+*   **Dynamic IP Allocation:** Automated client configuration using router-based DHCP pools.
+*   **Inter-VLAN Routing:** Router-on-a-Stick sub-interface configuration allowing controlled cross-department communication.
+*   **Hybrid Routing Domain:** Dynamic routing inside the campus intranet running **RIPv2**, with static routing pointing out to external cloud assets.
+
+---
+
+## 🛠️ Technologies & Protocols Used
+
+*   **Network Simulation:** Cisco Packet Tracer (v8.x preferred)
+*   **Architecture Model:** Cisco Three-Layer Hierarchical Model (Core, Distribution, Access)
+*   **Routing Protocols:**
+    *   **RIPv2 (Routing Information Protocol v2):** Classless dynamic routing protocol utilized across all internal campus networks.
+    *   **Static Routing:** Managed links pointing to external cloud environments.
+*   **Switching Protocols:**
+    *   **IEEE 802.1Q:** Frame tagging protocol used to manage trunking between Multi-Layer and Access switches.
+    *   **Inter-VLAN Routing:** Configured through hardware sub-interfaces ("Router-on-a-Stick").
+*   **Infrastructure Services:**
+    *   **DHCP Server:** Built directly into Cisco iOS routers to hand out dynamic IPs, default gateways, and DNS records dynamically.
+
+---
+
+## 📐 Network Architecture & Topology
+
+### 1. Main Campus
+Divided logically across three distinct facilities managed under a centralized distribution layer.
+
+*   **Building A:**
+    *   **Administration** (VLAN 10 | `192.168.1.0/24`)
+    *   **Human Resources** (VLAN 20 | `192.168.2.0/24`)
+    *   **Finance** (VLAN 30 | `192.168.3.0/24`)
+    *   **Faculty of Business** (VLAN 40 | `192.168.4.0/24`)
+*   **Building B:**
+    *   **Faculty of Engineering & Computing** (VLAN 50 | `192.168.5.0/24`)
+    *   **Faculty of Arts & Design** (VLAN 60 | `192.168.6.0/24`)
+*   **Building C:**
+    *   **Student Labs** (VLAN 70 | `192.168.7.0/24`)
+    *   **IT Department** (VLAN 80 | `192.168.8.0/24`) *(Hosts internal university Web & FTP servers)*
+
+### 2. Branch Campus (Faculty of Health & Sciences)
+*   **Staff Department:** (VLAN 90 | `192.168.9.0/24`)
+*   **Student Labs:** (VLAN 100 | `192.168.10.0/24`)
+
+### 3. External Edge Cloud
+*   **External Email Server Domain:** Hosted behind an isolated static cloud router (`20.0.0.0/30`).
+
+---
+
+## ⚙️ Core Configuration Snippets
+
+Below are standard configuration syntax examples applied throughout the project implementation:
+
+### 1. Inter-VLAN Sub-Interface Setup 
+```ios
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.1.1 255.255.255.0
+exit
+
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.2.1 255.255.255.0
+exit
+```
+
+### 2. Router-Based DHCP Pool Setup
+```ios
+service dhcp
+
+ip dhcp pool Admin_Pool
+ network 192.168.1.0 255.255.255.0
+ default-router 192.168.1.1
+ dns-server 192.168.1.1
+exit
+
+ip dhcp pool HR_Pool
+ network 192.168.2.0 255.255.255.0
+ default-router 192.168.2.1
+ dns-server 192.168.2.1
+exit
+```
+
+### 3. Multi-Layer Switch Trunking Port Setup
+```ios
+interface GigabitEthernet1/0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+exit
+```
+
+### 4. RIPv2 Dynamic Routing Domain Configuration
+```ios
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.1.0
+ network 192.168.2.0
+ [Advertise all corresponding subnet links]
+ no auto-summary
+exit
+```
