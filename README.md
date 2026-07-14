@@ -46,7 +46,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 
 ## 🧠 About This Portfolio
 This repository demonstrates both design and configuration skills across small to medium-sized networks.  
-All projects were built and tested using **Cisco Packet Tracer**, with documentation created in **VS Code** formats.
+All projects were built and tested using **Cisco Packet Tracer**, with documentation created in **VS Code**.
 
 ---
 
