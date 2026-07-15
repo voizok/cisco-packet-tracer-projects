@@ -1,5 +1,3 @@
-# cisco-packet-tracer-projects
-Cisco Packet Tracer network design portfolio with VLANs, OSPF, DHCP, NAT, and firewall security.
 # 🌐 Network Design Portfolio
 
 This repository showcases my hands-on Cisco Packet Tracer projects built during my journey to become a network engineer.  
