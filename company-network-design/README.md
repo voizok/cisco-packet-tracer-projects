@@ -6,7 +6,7 @@ A professional business network design for a trading floor support center, imple
 ---
 
 ## ⚙️ Configuration Summary
-- VLANs: Admin (10), HR (20), Finance (30), Business (40) etc..
+- Sales/Marketing (10), HR/Logistics (20), Finance/Accounts (30), Admin/Public Relations (40), ICT (50), and Server Room (60).
 - OSPF configured across Core routers and Layer 3 switches for dynamic network advertisement.
 - Inter-VLAN Routing
 - Router-based DHCP server configured with multiple pools
