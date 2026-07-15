@@ -9,7 +9,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 
 ## 🧱 Projects Overview
 
-### 🏫 [Campus Network Design & Implementation](./campus-network-project)
+### 🏫 [Campus Network Design & Implementation](./college-campus-network/README.md)
 **Level:** Intermediate  
 **Focus:** Hierarchical Network Design, Multi-site Campus Topology, VLANs, Router-on-a-stick, DHCP, and RIP Routing
 **Highlights:**
