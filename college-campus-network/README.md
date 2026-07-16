@@ -1,5 +1,7 @@
 # 🏫 College Campus Network
 
+![campus_topology](./campus_topology.png)
+
 ## 🧱 Overview
 A multi-campus university network design implemented in Cisco Packet Tracer. It features a hierarchical architecture connecting a main campus and a branch campus, utilizing VLAN segmentation, router-on-a-stick inter-VLAN routing, RIPv2 dynamic routing, and centralized DHCP services.
 ---
@@ -15,7 +17,7 @@ A multi-campus university network design implemented in Cisco Packet Tracer. It 
 ## 📁 Files
 - `campus_network.pkt` — Full Packet Tracer topology
 - `campus_topology.png` — Visual diagram
-- `configs/` — Router, switch, and firewall configuration files
+- `configs/` — Router, switch   configuration files
 
 ---
 
