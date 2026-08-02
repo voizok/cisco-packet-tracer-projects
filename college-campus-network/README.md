@@ -1,7 +1,7 @@
 # 🏫 College Campus Network
 
 ## 🧱 Overview
-Haai gadha
+A multi-campus university network design implemented in Cisco Packet Tracer. It features a hierarchical architecture connecting a main campus and a branch campus, utilizing VLAN segmentation, router-on-a-stick inter-VLAN routing, RIPv2 dynamic routing, and centralized DHCP services.
 ---
 
 ## ⚙️ Configuration Summary
