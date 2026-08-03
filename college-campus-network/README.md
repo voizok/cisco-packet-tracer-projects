@@ -8,7 +8,7 @@ branch campus, utilizing VLAN segmentation, router-on-a-stick inter-VLAN
 routing, RIPv2 dynamic routing, and centralized DHCP services.
 ---
 
-![alt text](network_flowchart.drawio.png)
+flowchart.png
 
 ---
 
