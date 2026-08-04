@@ -5,6 +5,12 @@ A professional business network design for a trading floor support center, imple
 
 ---
 
+<p align="center">
+  <img src="./images/flowchart.png" alt="Network Topology">
+</p>
+
+---
+
 ## ⚙️ Configuration Summary
 - Sales/Marketing (10), HR/Logistics (20), Finance/Accounts (30), Admin/Public Relations (40), ICT (50), and Server Room (60).
 - OSPF configured across Core routers and Layer 3 switches for dynamic network advertisement.
