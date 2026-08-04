@@ -1,8 +1,5 @@
 # 🏫 College Campus Network
 
-<p align="center">
-  <img src="./images/flowchart.png" alt="Network Topology">
-</p>
 
 ## 🧱 Overview
 
@@ -10,6 +7,12 @@ A multi-campus university network design implemented in Cisco Packet Tracer.
 It features a hierarchical architecture connecting a main campus and a
 branch campus, utilizing VLAN segmentation, router-on-a-stick inter-VLAN
 routing, RIPv2 dynamic routing, and centralized DHCP services.
+
+---
+
+<p align="center">
+  <img src="./images/flowchart.png" alt="Network Topology">
+</p>
 
 ---
 
