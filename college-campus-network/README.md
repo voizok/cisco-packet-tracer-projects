@@ -1,7 +1,7 @@
 # 🏫 College Campus Network
 
 <p align="center">
-  <img src="flowchart.png" alt="ColleNetwork Topology">
+  <img src="./images/flowchart.pngflowchart.png" alt="ColleNetwork Topology">
 </p>
 
 ## 🧱 Overview
