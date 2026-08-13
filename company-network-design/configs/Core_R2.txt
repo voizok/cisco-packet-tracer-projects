@@ -1,0 +1,117 @@
+hostname Core_R2
+!
+!
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+username admin password 0 cisco
+!
+!
+license udi pid CISCO2911/K9 sn FTX1524P9JX-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+no ip domain-lookup
+ip domain-name cisco.net
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 172.16.3.150 255.255.255.252
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 172.16.3.158 255.255.255.252
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ ip address 195.136.17.9 255.255.255.252
+ ip nat outside
+ clock rate 64000
+!
+interface Serial0/0/1
+ ip address 195.136.17.13 255.255.255.252
+ ip nat outside
+ clock rate 64000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 10
+ router-id 4.4.4.4
+ log-adjacency-changes
+ network 172.16.3.148 0.0.0.3 area 0
+ network 172.16.3.156 0.0.0.3 area 0
+ network 195.136.17.8 0.0.0.3 area 0
+ network 195.136.17.12 0.0.0.3 area 0
+!
+ip nat inside source list 1 interface Serial0/0/1 overload
+ip classless
+ip route 0.0.0.0 0.0.0.0 Serial0/0/1 
+ip route 0.0.0.0 0.0.0.0 Serial0/0/0 70
+!
+ip flow-export version 9
+!
+!
+access-list 1 permit 176.16.1.0 0.0.0.127
+access-list 1 permit 176.16.1.128 0.0.0.127
+access-list 1 permit 176.16.2.0 0.0.0.127
+access-list 1 permit 176.16.2.128 0.0.0.127
+access-list 1 permit 176.16.3.0 0.0.0.127
+access-list 1 permit 176.16.3.128 0.0.0.15
+!
+!
+!
+!
+!
+line con 0
+ password cisco
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+end
