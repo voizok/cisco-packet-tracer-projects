@@ -1,7 +1,7 @@
 # 🏢 Company Network Design# 
 
 ## 🧱 Overview
-A professional business network design for a trading floor support center, implemented in Cisco Packet Tracer. The project features a redundant, hierarchical architecture (Core, Distribution, and Access layers) supporting 600 staff across three floors. It incorporates advanced enterprise technologies, including VLAN segmentation, Inter-VLAN routing via multi-layer switches, OSPF dynamic routing, redundant ISP connectivity with NAT (PAT), port security, and comprehensive wireless network integration for mobile devices
+A professional business network design for a trading floor support center, implemented in Cisco Packet Tracer. The project features a redundant, hierarchical architecture (Core, Distribution, and Access layers) supporting 600 staff across three floors. It incorporates advanced enterprise technologies, including VLAN segmentation, Inter-VLAN routing via multi-layer switches, OSPF dynamic routing, redundant ISP connectivity with NAT (PAT), port security, and comprehensive wireless network integration for mobile devices.
 
 ---
 
@@ -15,8 +15,8 @@ A professional business network design for a trading floor support center, imple
 - Sales/Marketing (10), HR/Logistics (20), Finance/Accounts (30), Admin/Public Relations (40), ICT (50), and Server Room (60).
 - OSPF configured across Core routers and Layer 3 switches for dynamic network advertisement.
 - Inter-VLAN Routing
-- Router-based DHCP server configured with multiple pools
-- Port security (sticky MAC learning) for Finance/Accounts, SSH for remote device management, and NAT Overload (PAT) for external connectivity to redundant ISPs
+- Router-based DHCP server configured with multiple pools.
+- Port security (sticky MAC learning) for Finance/Accounts, SSH for remote device management, and NAT Overload (PAT) for external   connectivity to redundant ISPs.
 
 ---
 
